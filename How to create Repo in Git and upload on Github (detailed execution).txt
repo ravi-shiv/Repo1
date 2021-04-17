@@ -1,0 +1,309 @@
+PC@mydesktop MINGW64 ~
+$ mk dir RepoStorage
+bash: mk: command not found
+
+PC@mydesktop MINGW64 ~
+$ mkdir RepoStorage
+
+PC@mydesktop MINGW64 ~
+$ cd RepoStorage/
+
+PC@mydesktop MINGW64 ~/RepoStorage
+$ mkdir Repo1
+
+PC@mydesktop MINGW64 ~/RepoStorage
+$ cd Repo1/
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1
+$ git init
+Initialized empty Git repository in C:/Users/PC/RepoStorage/Repo1/.git/
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ touch file1.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ notepad file1.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git git status
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git add .
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git commit -m "first commit"
+[master (root-commit) 0e34328] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$  git log
+commit 0e3432824cf5d11dfcba536d5f10d2cf6cbfbbfd (HEAD -> master)
+Author: ravi_git <ravi.shivangekar@gmail.com>
+Date:   Sat Apr 17 17:11:53 2021 +0530
+
+    first commit
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ touch file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ notepad file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git add .
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git commit -m "second commit"
+[master 957e41c] second commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git log
+commit 957e41ccd992517bed9056f9191a6259fe808ab4 (HEAD -> master)
+Author: ravi_git <ravi.shivangekar@gmail.com>
+Date:   Sat Apr 17 17:14:50 2021 +0530
+
+    second commit
+
+commit 0e3432824cf5d11dfcba536d5f10d2cf6cbfbbfd
+Author: ravi_git <ravi.shivangekar@gmail.com>
+Date:   Sat Apr 17 17:11:53 2021 +0530
+
+    first commit
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ notepad file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git restore file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ notepad file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git add .
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git commit -m "second commit"
+[master 5b1826b] second commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ winword file2.txt
+bash: winword: command not found
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ wordpad file2.txt
+/usr/bin/wordpad: line 20: C:\Program: No such file or directory
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ notepad file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git restore file2.txt
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Doc1.docx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git add .
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git commit -m "added wordfile"
+[master ccc5137] added wordfile
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Doc1.docx
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git log
+commit ccc5137f3095aa1d8a44625b3e8dd7d432cbb377 (HEAD -> master)
+Author: ravi_git <ravi.shivangekar@gmail.com>
+Date:   Sat Apr 17 18:20:31 2021 +0530
+
+    added wordfile
+
+commit 5b1826b36b2696bb3095dfa659cd4d22ae32588f
+Author: ravi_git <ravi.shivangekar@gmail.com>
+Date:   Sat Apr 17 17:16:51 2021 +0530
+
+    second commit
+
+commit 957e41ccd992517bed9056f9191a6259fe808ab4
+Author: ravi_git <ravi.shivangekar@gmail.com>
+Date:   Sat Apr 17 17:14:50 2021 +0530
+
+    second commit
+
+commit 0e3432824cf5d11dfcba536d5f10d2cf6cbfbbfd
+Author: ravi_git <ravi.shivangekar@gmail.com>
+Date:   Sat Apr 17 17:11:53 2021 +0530
+
+    first commit
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Doc1.docx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CD Tax Submitssion - 2020-21.docx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git add .
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git commit -m "renamed word file"
+[master 0dbdf0a] renamed word file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename Doc1.docx => CD Tax Submitssion - 2020-21.docx (100%)
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git remote add origin https://github.com/ravi-shiv/Repo1.git
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git remote -v
+origin  https://github.com/ravi-shiv/Repo1.git (fetch)
+origin  https://github.com/ravi-shiv/Repo1.git (push)
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git push -u origin master
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (14/14), 295.04 KiB | 21.07 MiB/s, done.
+Total 14 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/ravi-shiv/Repo1/pull/new/master
+remote:
+To https://github.com/ravi-shiv/Repo1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git remote add origin https://github.com/ravi-shiv/Repo1.git
+error: remote origin already exists.
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)   ### Resolve the issue above using ##
+$ git remote set-url --delete Repo1 https://github.com/ravi-shiv/Repo1.git
+error: No such remote 'Repo1'
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git remote set-url origin https://github.com/ravi-shiv/Repo1.git
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git remote -v
+origin  https://github.com/ravi-shiv/Repo1.git (fetch)
+origin  https://github.com/ravi-shiv/Repo1.git (push)
+
+PC@mydesktop MINGW64 ~/RepoStorage/Repo1 (master)
+$ git push -u origin master
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (14/14), 295.04 KiB | 22.69 MiB/s, done.
+Total 14 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ravi-shiv/Repo1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
